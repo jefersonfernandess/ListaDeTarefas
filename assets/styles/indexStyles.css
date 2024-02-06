@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: teal;
+}
+
 .rounded {
     border-top: 8px solid #bbb;
     border-radius: 5px;
@@ -15,8 +19,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: teal;
+    margin-top: 1rem;
 }
 
 .main__sectionOne {
