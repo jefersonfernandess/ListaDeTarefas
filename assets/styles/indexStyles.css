@@ -68,7 +68,7 @@ body {
 }
 
 .main__sectionTwo {
-    background-color: white;
+    background-color: none;
     width: 40rem;
     padding: 1rem;
     border-radius: 0.5rem;

@@ -8,7 +8,10 @@ let listItems = document.querySelector("#listItems");
 let btnRemove;
 
 function addNewItem() {
-    idItemList += 1
+
+    let sectionTwoBg = document.querySelector(".main__sectionTwo");
+    sectionTwoBg.style.backgroundColor = "white";
+
     if (!inputAddList.value) return;
 
     // CRIA A DIV FILHA DA UL
