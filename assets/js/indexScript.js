@@ -1,10 +1,14 @@
+let idItemList = 0;
+let inputAddList = document.querySelector("#inputAddList");
 let btnClick = document.querySelector("#addItemBtn");
 btnClick.addEventListener("click", addNewItem);
 
-let inputAddList = document.querySelector("#inputAddList");
 let listItems = document.querySelector("#listItems");
 
+let btnRemove;
+
 function addNewItem() {
+    idItemList += 1
     if (!inputAddList.value) return;
 
     // CRIA A DIV FILHA DA UL
@@ -20,14 +24,28 @@ function addNewItem() {
 
     // CRIA O BUTTON FILHA DA DIV
     var btnItem = document.createElement("button");
-    btnItem.setAttribute("class", "items__btn");
-    btnItem.setAttribute("id", "remvItemBtn");
+    btnItem.setAttribute("class", "items__btn remvItemBtn");
+    btnItem.setAttribute("id", `id${idItemList}`);
     btnItem.innerText = "Apagar"
+    btnItem.addEventListener('click', removeItem)
+    btnRemove = document.querySelector(".remvItemBtn");
 
     // ADICIONA O LI E O BUTTON DENTRO DA DIV
     divListItems.appendChild(liItem);
     divListItems.appendChild(btnItem);
 
     listItems.appendChild(divListItems);
-    
+
 }
+
+function removeItem() {
+    if (btnRemove.classList.contains("remvItemBtn")) {
+        var item = this.parentNode;
+        item.parentNode.removeChild(item);
+    }
+    else {
+        alert("Item não encontrado");
+    }
+}
+
+
