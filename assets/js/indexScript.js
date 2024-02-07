@@ -16,6 +16,8 @@ function addNewItem() {
     liItem.setAttribute("class", "list__items__item");
     liItem.innerText = inputAddList.value
 
+    inputAddList.value = "";
+
     // CRIA O BUTTON FILHA DA DIV
     var btnItem = document.createElement("button");
     btnItem.setAttribute("class", "items__btn");
