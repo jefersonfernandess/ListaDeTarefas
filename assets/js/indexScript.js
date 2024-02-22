@@ -44,7 +44,7 @@ function addNewItem() {
 
 function removeItem() {
     if (btnRemove.classList.contains("remvItemBtn")) {
-        var item = this.parentNode;
+        let item = this.parentNode;
         item.parentNode.removeChild(item);
     }
     else {
