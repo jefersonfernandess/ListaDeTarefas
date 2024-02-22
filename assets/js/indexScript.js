@@ -12,21 +12,22 @@ function addNewItem() {
     let sectionTwoBg = document.querySelector(".main__sectionTwo");
     sectionTwoBg.style.backgroundColor = "white";
 
+    //NÃO PERMITE CRIAR UM ITEM VAZIO
     if (!inputAddList.value) return;
 
     // CRIA A DIV FILHA DA UL
-    var divListItems = document.createElement("div");
+    let divListItems = document.createElement("div");
     divListItems.setAttribute("class", "main__sectionTwo__list__items");
 
     // CRIA A LI FILHA DA DIV
-    var liItem = document.createElement("li");
+    let liItem = document.createElement("li");
     liItem.setAttribute("class", "list__items__item");
     liItem.innerText = inputAddList.value
 
     inputAddList.value = "";
 
     // CRIA O BUTTON FILHA DA DIV
-    var btnItem = document.createElement("button");
+    let btnItem = document.createElement("button");
     btnItem.setAttribute("class", "items__btn remvItemBtn");
     btnItem.setAttribute("id", `id${idItemList}`);
     btnItem.innerText = "Apagar"
